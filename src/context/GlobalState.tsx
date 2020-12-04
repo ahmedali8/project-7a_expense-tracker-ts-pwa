@@ -1,16 +1,6 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import AppReducer from './AppReducer';
 
-// type Transaction = {
-//   id: number;
-//   text: string;
-//   amount: number;
-// };
-
-// type GlobalContextType = {
-//   transactions: any[];
-// };
-
 const dummyTransactions = [
   { id: 1, text: 'Flower', amount: -20 },
   { id: 2, text: 'Salary', amount: 300 },
