@@ -1,6 +1,13 @@
 import React from 'react';
 // components
-import { Header, Balance, IncomeExpenses } from './components';
+import {
+  Header,
+  Balance,
+  IncomeExpenses,
+  TransactionList,
+  AddTransaction,
+  Footer,
+} from './components';
 // styles
 import './App.css';
 
@@ -11,9 +18,9 @@ function App() {
       <div className="container">
         <Balance />
         <IncomeExpenses />
-        {/* <TransactionList />
+        <TransactionList />
         <AddTransaction />
-        <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
