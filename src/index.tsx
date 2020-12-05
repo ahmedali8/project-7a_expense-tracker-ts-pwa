@@ -5,6 +5,8 @@ import { GlobalProvider } from './context/GlobalState';
 import reportWebVitals from './reportWebVitals';
 import swDev from './swDev';
 
+import { set, get } from 'idb-keyval';
+
 ReactDOM.render(
   <GlobalProvider>
     <App />
@@ -17,3 +19,10 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 swDev();
+
+async function testIDBKeyval() {
+  await set('hello', 'world');
+  const whatDoWeHave = await get('hello');
+  console.log(whatDoWeHave);
+}
+testIDBKeyval();
